@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IDEAL PUBLIC SCHOOL</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <meta name="theme-color" content="#2fba3b">
+    <link rel="manifest" href="site.webmanifest">
+    <link rel="apple-touch-icon" href="icon.png">
+    <link rel="shortcut icon" href="images/logo.png" type="image/x-icon">
+
+    <style>
+        /* Calendar Container */
+        .calendar-container {
+            text-align: center;
+            margin: 50px auto;
+        }
+
+        /* Download Button */
+        .download-btn {
+            background: #007bff;
+            color: white;
+            border: none;
+            padding: 15px 20px;
+            border-radius: 5px;
+            font-size: 1.2rem;
+            cursor: pointer;
+            transition: background 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .download-btn:hover {
+            background: #0056b3;
+            transform: scale(1.1);
+            box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .download-btn:active {
+            transform: scale(1.05);
+            box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Media Queries for Mobile Responsiveness */
+
+        /* For devices with a max width of 768px (tablets and smaller) */
+        @media (max-width: 768px) {
+            .download-btn {
+                font-size: 1rem;
+                padding: 12px 18px;
+            }
+        }
+
+        /* For devices with a max width of 480px (mobile phones) */
+        @media (max-width: 480px) {
+            .download-btn {
+                font-size: 0.9rem;
+                padding: 10px 15px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Header -->
+    <header>
+        <img src="images/logo.png" alt="School Logo" class="logo">
+        <div class="school-info">
+            <h1>IDEAL PUBLIC SCHOOL</h1>
+            <p>Pakri Chowk, Alinagar, Darbhanga, State- Bihar, Pin Code - 847103 | Est. 2012</p>
+            <p>UDISE No. - 10131502705 , Reg. No. - 215118720211129140415</p>
+        </div>
+    </header>
+
+    <!-- Download Button -->
+    <div class="calendar-container">
+        <button class="download-btn" onclick="window.location.href='images/documents/academic-calendar.pdf'">
+            Download Academic Calendar
+        </button>
+    </div>
+</body>
+
+</html>

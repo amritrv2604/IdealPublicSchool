@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>IDEAL PUBLIC SCHOOL</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <meta name="theme-color" content="#2fba3b">
+  <link rel="manifest" href="site.webmanifest">
+  <link rel="apple-touch-icon" href="icon.png">
+  <link rel="shortcut icon" href="images/logo.png" type="image/x-icon">
+</head>
+
+<body>
+  <!-- Header -->
+  <header>
+    <!-- Mobile Menu Button (Left Side) -->
+    <button class="menu-toggle" aria-label="Toggle Menu">☰</button>
+
+    <!-- Logo centered above school info -->
+    <img src="images/logo.png" alt="School Logo" class="logo">
+
+    <!-- School Info (Center) -->
+    <div class="school-info">
+      <h1>IDEAL PUBLIC SCHOOL</h1>
+      <p>Pakri Chowk, Alinagar, Darbhanga, State- Bihar, Pin Code - 847103 | Est. 2012</p>
+      <p>UDISE No. - 10131502705 , Reg. No. - 215118720211129140415 </p>
+    </div>
+  </header>
+
+  <!-- Navigation Menu -->
+  <nav id="main-nav">
+    <a href="index.html">Home</a>
+    <a href="about.html">About Us</a>
+    <a href="contact.html" class="active">Contact Us</a>
+    <a href="feedback.html">Feedback</a>
+
+    <div class="contact-buttons">
+      <a href="https://wa.me/919931211638" class="whatsapp-btn" target="_blank">
+        <i class="fab fa-whatsapp"></i> WhatsApp
+      </a>
+      <a href="tel:+919931211638" class="call-btn" id="callButton">
+        <i class="fas fa-phone"></i> Call Now
+      </a>
+    </div>
+
+  </nav>
+
+  <!-- CSS Styles -->
+  <style>
+    .contact-buttons {
+      display: inline-flex;
+      margin-left: auto;
+      gap: 10px;
+    }
+
+    .whatsapp-btn,
+    .call-btn {
+      padding: 8px 15px;
+      border-radius: 4px;
+      color: white;
+      text-decoration: none;
+      font-size: 0.9rem;
+      transition: all 0.3s;
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+    }
+
+    .whatsapp-btn {
+      background: #25D366;
+      /* WhatsApp green */
+    }
+
+    .whatsapp-btn:hover {
+      background: #128C7E;
+    }
+
+    .call-btn {
+      background: #3498db;
+      /* Blue */
+    }
+
+    .call-btn:hover {
+      background: #2980b9;
+    }
+
+    /* For Font Awesome Icons */
+    .fab,
+    .fas {
+      font-size: 1.1rem;
+    }
+
+    main {
+      padding: 20px;
+      background-color: #f4f4f4;
+      font-family: Arial, sans-serif;
+      color: #333;
+      justify-content: center;
+    }
+
+    .contact-content {
+      max-width: 1000px;
+      margin: 30px auto;
+      padding: 30px;
+      background-color: #fff;
+      border-radius: 8px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    @media screen and (max-width: 768px) {
+      .contact-content {
+        padding: 20px;
+        margin: 0 auto;
+      }
+
+      .contact-methods {
+        flex-direction: column;
+      }
+
+    }
+  </style>
+
+  <!-- Contact Content -->
+  <main class="contact-content">
+    <h2>Get in Touch</h2><br>
+    <div class="contact-methods">
+      <div class="contact-card">
+        <i class="fas fa-phone-alt">&nbsp;&nbsp;Call Us</i>
+        <p>+91 9931211638</p>
+        <p>+91 8210626798</p>
+        <p>+91 9354861146</p>
+        <p>Office Hours: 8 AM - 4 PM (Mon-Sat)</p>
+      </div><br><br>
+      <div class="contact-card">
+        <i class="fas fa-envelope">&nbsp;&nbsp;Email Us</i>
+        <p>Idealpublicschoolpakri@gmail.com</p>
+        <p>Admissions: Contact to the office ( 9931211638 )</p>
+      </div><br><br>
+      <div class="contact-card">
+        <i class="fas fa-map-marker-alt">&nbsp;&nbsp;Visit Us</i>
+        <p>Pakri Chowk, Alinagar, Darbhanga, State- Bihar, Pin Code - 847103 | Est. 2012</p>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-content">
+      <!-- School Info -->
+      <div class="footer-section">
+        <img src="images/logo.png" alt="School Logo" class="footer-logo">
+        <h3>IDEAL PUBLIC SCHOOL</h3>
+        <p>Est. 2012 | Recognized Private School under Bihar State Education Department</p>
+        <p>UDISE No. - 10131502705 , Reg. No. - 215118720211129140415</p>
+        <p>12+ Years of Excellence</p>
+      </div>
+
+      <!-- Quick Links -->
+      <div class="footer-section">
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+          <li><a href="admission.html"><i class="fas fa-edit"></i> Admissions</a></li>
+          <li><a href="calendar.html"><i class="fas fa-calendar-alt"></i> Academic Calendar</a></li>
+        </ul>
+      </div>
+
+      <!-- Contact Info -->
+      <div class="footer-section contact-info">
+        <h3>Contact</h3>
+        <p><i class="fas fa-map-marker-alt"></i> Ideal Public School, pin code - 847103, Ashapur-Alinagar Road.</p>
+        <p>Darbhanga, State - Bihar</p>
+        <p><i class="fas fa-phone"></i> +91 9931211638 , +91 8210626798 , +91 9354861146</p>
+        <p><i class="fas fa-envelope"></i> Idealpublicschoolpakri@gmail.com</p>
+      </div>
+
+      <!-- Social Media -->
+      <div class="footer-section">
+        <h3>Follow Us</h3>
+        <div class="social-icons">
+          <a href="https://www.facebook.com/share/1AcJ9ZaQHm/" target="_blank"><i class="fab fa-facebook-f"></i></a>
+          <a href="https://www.instagram.com/ideal_public_school_9931?igsh=ODNuZ3hqeDZrZzFo" target="_blank"><i
+              class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>&copy; 2023 IDEAL PUBLIC SCHOOL. All Rights Reserved. | Privacy Policy</p>
+    </div>
+    <a href="#" class="back-to-top" title="Back to Top">↑</a>
+  </footer>
+
+  <!-- JS -->
+  <script>
+    // Detect mobile devices
+    function isMobile() {
+      return /Android|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+    }
+
+    // Show/hide call button based on device
+    document.addEventListener('DOMContentLoaded', function () {
+      const callBtn = document.querySelector('.call-btn');
+      if (!isMobile()) {
+        callBtn.onclick = function (e) {
+          e.preventDefault();
+          alert("Please call us at: 9931211638");
+        };
+      }
+    });
+  </script>
+</body>
+
+<script src="scripts/script.js"></script>
+
+</html>

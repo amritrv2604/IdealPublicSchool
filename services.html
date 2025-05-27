@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IDEAL PUBLIC SCHOOL</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <meta name="theme-color" content="#2fba3b">
+    <link rel="manifest" href="site.webmanifest">
+    <link rel="apple-touch-icon" href="icon.png">
+    <link rel="shortcut icon" href="images/logo.png" type="image/x-icon">
+
+    <!-- CSS -->
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+        body {
+            background-color: #f5f5f5;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        /* Beautiful Close Button */
+        .close-btn {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            width: 40px;
+            height: 40px;
+            background: #fff;
+            border: none;
+            border-radius: 50%;
+            color: #e74c3c;
+            font-size: 1.5rem;
+            font-weight: bold;
+            cursor: pointer;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 100;
+        }
+
+        .close-btn:hover {
+            background: #e74c3c;
+            color: white;
+            transform: rotate(90deg);
+            box-shadow: 0 4px 15px rgba(47, 186, 59, 0.3);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+            font-weight: 700;
+        }
+
+        .school-info p {
+            font-size: 1rem;
+            opacity: 0.9;
+        }
+
+        .page-header {
+            text-align: center;
+            margin: 3rem 0;
+        }
+
+        .page-header h2 {
+            font-size: 2.2rem;
+            color: #e74c3c;
+            margin-bottom: 1rem;
+            position: relative;
+            display: inline-block;
+        }
+
+        .page-header h2::after {
+            content: '';
+            position: absolute;
+            width: 50%;
+            height: 4px;
+            background: #e74c3c;
+            bottom: -10px;
+            left: 25%;
+            border-radius: 2px;
+        }
+
+        .page-header p {
+            font-size: 1.1rem;
+            color: #666;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+
+        .service-card {
+            background: white;
+            border-radius: 15px;
+            padding: 2rem;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            transition: all 0.3s ease;
+            text-align: center;
+            border-top: 4px solid #e74c3c;
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .service-icon {
+            font-size: 3rem;
+            color: #e74c3c;
+            margin-bottom: 1.5rem;
+        }
+
+        .service-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: #333;
+        }
+
+        .service-card p {
+            color: #666;
+            margin-bottom: 1.5rem;
+        }
+
+        .btn {
+            display: inline-block;
+            background: #e74c3c;
+            color: white;
+            padding: 0.8rem 1.5rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            border: 2px solid #e74c3c;
+        }
+
+        .btn:hover {
+            background: transparent;
+            color: #e74c3c;
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2rem;
+            }
+
+            .service-card {
+                padding: 1.5rem;
+            }
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+
+<body>
+    <button class="close-btn" onclick="window.location.href='index.html'">×</button>
+
+    <!-- Header -->
+    <header>
+        <img src="images/logo.png" alt="School Logo" class="logo">
+        <div class="school-info">
+            <h1>IDEAL PUBLIC SCHOOL</h1>
+            <p>Pakri Chowk, Alinagar, Darbhanga, State- Bihar, Pin Code - 847103 | Est. 2012</p>
+            <p>UDISE No. - 10131502705 , Reg. No. - 215118720211129140415 </p>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <div class="container">
+        <div class="page-header">
+            <h2>Our Services</h2>
+            <p>Access various school resources and information</p>
+        </div>
+
+        <div class="services-grid">
+            <div class="service-card">
+                <div class="service-icon">
+                    <i class="fas fa-user-graduate"></i>
+                </div>
+                <h3>Admission Form</h3>
+                <p>Apply for admission to our prestigious institution and begin your educational journey with us.</p>
+                <a href="admission.html" class="btn">Apply Now</a>
+            </div>
+
+            <div class="service-card">
+                <div class="service-icon">
+                    <i class="fas fa-calendar-alt"></i>
+                </div>
+                <h3>School Timetable</h3>
+                <p>View class schedules, timings, and academic routines for all grades.</p>
+                <a href="timetable.html" class="btn">View Timetable</a>
+            </div>
+
+            <div class="service-card">
+                <div class="service-icon">
+                    <i class="fas fa-calendar-day"></i>
+                </div>
+                <h3>Academic Calendar</h3>
+                <p>Important dates, holidays, examinations and school events at a glance.</p>
+                <a href="calendar.html" class="btn">View Calendar</a>
+            </div>
+
+            <div class="service-card">
+                <div class="service-icon">
+                    <i class="fas fa-calendar-day"></i>
+                </div>
+                <h3>Gallery & Achievements</h3>
+                <p>Explore our gallery showcasing memorable moments, events, and achievements that define our journey of
+                    excellence.</p>
+                <a href="gallery.html" class="btn">Click to View</a>
+            </div>
+
+            <div class="service-card">
+                <div class="service-icon">
+                    <i class="fas fa-calendar-day"></i>
+                </div>
+                <h3>Results</h3>
+                <p>Explore the academic achievements of our students and access detailed results for all grades.</p>
+                <a href="results.html" class="btn">See Results</a>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">
+                    <i class="fas fa-calendar-day"></i>
+                </div>
+                <h3>Project work</h3>
+                <p>Explore the Summer Vacation Project work for our students and access detailed Homeworks for all grades.</p>
+                <a href="Project_work.html" class="btn">See Project work</a>
+            </div>
+
+            <div class="service-card">
+                <div class="service-icon">
+                    <i class="fas fa-calendar-day"></i>
+                </div>
+                <h3>Message from Director</h3>
+                <p>Discover the guiding principles that drive our commitment to excellence in education.</p>
+                <a href="director.html" class="btn">Click to View</a>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <!-- School Info -->
+            <div class="footer-section">
+                <img src="images/logo.png" alt="School Logo" class="footer-logo">
+                <h3>IDEAL PUBLIC SCHOOL</h3>
+                <p>Est. 2012 | Recognized Private School under Bihar State Education Department</p>
+                <p>UDISE No. - 10131502705 , Reg. No. - 215118720211129140415</p>
+                <p>12+ Years of Excellence</p>
+            </div>
+
+            <!-- Quick Links -->
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+                    <li><a href="admission.html"><i class="fas fa-edit"></i> Admissions</a></li>
+                    <li><a href="calendar.html"><i class="fas fa-calendar-alt"></i> Academic Calendar</a></li>
+                </ul>
+            </div>
+
+            <!-- Contact Info -->
+            <div class="footer-section contact-info">
+                <h3>Contact</h3>
+                <p><i class="fas fa-map-marker-alt"></i> Ideal Public School, pin code - 847103, Ashapur-Alinagar Road.
+                </p>
+                <p>Darbhanga, State - Bihar</p>
+                <p><i class="fas fa-phone"></i> +91 9931211638 , +91 8210626798 , +91 9354861146</p>
+                <p><i class="fas fa-envelope"></i> Idealpublicschoolpakri@gmail.com</p>
+            </div>
+
+            <!-- Social Media -->
+            <div class="footer-section">
+                <h3>Follow Us</h3>
+                <div class="social-icons">
+                    <a href="https://www.facebook.com/share/1AcJ9ZaQHm/" target="_blank"><i
+                            class="fab fa-facebook-f"></i></a>
+                    <a href="https://www.instagram.com/ideal_public_school_9931?igsh=ODNuZ3hqeDZrZzFo"
+                        target="_blank"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2023 IDEAL PUBLIC SCHOOL. All Rights Reserved. | Privacy Policy</p>
+        </div>
+        <a href="#" class="back-to-top" title="Back to Top">↑</a>
+    </footer>
+
+    <!-- JS -->
+    <script>
+        // Add ripple effect to feature boxes
+        document.querySelectorAll('.feature-box').forEach(box => {
+            box.addEventListener('click', function (e) {
+                // Remove any existing ripple
+                const existingRipple = this.querySelector('.ripple');
+                if (existingRipple) {
+                    existingRipple.remove();
+                }
+
+                // Create ripple
+                const ripple = document.createElement('span');
+                ripple.classList.add('ripple');
+                this.appendChild(ripple);
+
+                // Position ripple
+                const rect = this.getBoundingClientRect();
+                const size = Math.max(rect.width, rect.height);
+                ripple.style.width = ripple.style.height = `${size}px`;
+                ripple.style.left = `${e.clientX - rect.left - size / 2}px`;
+                ripple.style.top = `${e.clientY - rect.top - size / 2}px`;
+
+                // Remove ripple after animation
+                setTimeout(() => {
+                    ripple.remove();
+                    // Navigate after animation completes
+                    window.location.href = this.getAttribute('onclick').match(/'([^']+)'/)[1];
+                }, 600);
+            });
+        });
+    </script>
+</body>
+
+</html>

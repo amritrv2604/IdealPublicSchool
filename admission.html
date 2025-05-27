@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IDEAL PUBLIC SCHOOL</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="admission.css">
+    <link rel="manifest" href="site.webmanifest">
+    <link rel="apple-touch-icon" href="icon.png">
+    <link rel="shortcut icon" href="images/logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <meta name="theme-color" content="#2fba3b">
+</head>
+
+<body>
+    <!-- Header (Same as Services Page) -->
+    <header>
+        <img src="images/logo.png" alt="School Logo" class="logo">
+        <div class="school-info">
+            <h1>IDEAL PUBLIC SCHOOL</h1>
+            <p>Pakri Chowk, Alinagar, Darbhanga, State- Bihar, Pin Code - 847103 | Est. 2012</p>
+            <p>UDISE No. - 10131502705 , Reg. No. - 215118720211129140415 </p>
+        </div>
+    </header>
+
+    <!-- Admission Form -->
+    <div class="form-container">
+        <h2>ADMISSION FORM</h2>
+        <form action="https://formspree.io/f/xanekeey" method="POST">
+            <label for="name">Student Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="age">Age:</label>
+            <input type="text" id="age" name="age" required>
+
+            <label for="parent">Parent Name:</label>
+            <input type="text" id="parent" name="parent" required>
+
+            <label for="address">Address:</label>
+            <input type="text" id="address" name="address" required>
+
+            <label for="school">Previous School:</label>
+            <input type="text" id="school" name="school" required>
+
+
+
+            <label for="class">Class Applying For:</label>
+            <select id="class" name="class" required>
+                <option value="">Select Class</option>
+                <option value="nursery">Nursery</option>
+                <option value="lkg">LKG</option>
+                <option value="ukg">UKG</option>
+                <option value="1">Class 1</option>
+                <option value="2">Class 2</option>
+                <option value="2">Class 3</option>
+                <option value="2">Class 4</option>
+                <option value="2">Class 5</option>
+                <option value="2">Class 6</option>
+                <option value="2">Class 7</option>
+                <option value="2">Class 8</option>
+                <option value="2">Class 9</option>
+                <option value="2">Class 10</option>
+                <!-- Add more classes as needed -->
+            </select>
+
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone" name="phone" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <button type="submit">SUBMIT</button>
+        </form>
+    </div>
+
+</body>
+
+</html>

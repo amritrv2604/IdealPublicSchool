@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IDEAL PUBLIC SCHOOL</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <meta name="theme-color" content="#2fba3b">
+    <link rel="manifest" href="site.webmanifest">
+    <link rel="apple-touch-icon" href="icon.png">
+    <link rel="shortcut icon" href="images/logo.png" type="image/x-icon">
+
+    <style>
+        /* General Reset */
+        body,
+        h1,
+        h2,
+        p,
+        button,
+        select,
+        label {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Body Styling */
+        body {
+            background: linear-gradient(to right, #f8f9fa, #e9ecef);
+            color: #333;
+            padding: 20px;
+        }
+
+        /* Timetable Container */
+        .timetable-container {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            max-width: 600px;
+            margin: 20px auto;
+            text-align: center;
+        }
+
+        .timetable-container h2 {
+            color: #007bff;
+            margin-bottom: 20px;
+        }
+
+        .timetable-container label {
+            font-weight: bold;
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        .timetable-container select {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 1rem;
+            transition: border-color 0.3s ease;
+        }
+
+        .timetable-container select:focus {
+            border-color: #007bff;
+            outline: none;
+        }
+
+        #timetable-display {
+            background: #f8f9fa;
+            padding: 15px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        #timetable-display p {
+            color: #555;
+            font-size: 1rem;
+        }
+
+        /* Adjust timetable image size */
+        #timetable-display img {
+            max-width: 100%;
+            /* Ensures the image scales within its container */
+            height: auto;
+            /* Maintains aspect ratio */
+            border-radius: 10px;
+            /* Adds rounded corners */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            /* Adds a subtle shadow */
+            margin: 10px 0;
+            /* Adds spacing around the image */
+        }
+
+        /* Buttons */
+        .download-btn {
+            background: #007bff;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: background 0.3s ease, transform 0.2s ease;
+        }
+
+        .download-btn:hover {
+            background: #0056b3;
+            transform: scale(1.05);
+        }
+
+        .back-btn {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: #6c757d;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 50%;
+            font-size: 1.5rem;
+            cursor: pointer;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: background 0.3s ease, transform 0.2s ease;
+        }
+
+        .back-btn:hover {
+            background: #5a6268;
+            transform: scale(1.1);
+        }
+
+        /* Media Queries for Mobile Responsiveness */
+
+        /* For devices with a max width of 768px (tablets and smaller) */
+        @media (max-width: 768px) {
+            body {
+                padding: 10px;
+            }
+
+            header {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            header .logo {
+                height: 40px;
+                margin-bottom: 10px;
+            }
+
+            header .school-info h1 {
+                font-size: 1.2rem;
+            }
+
+            header .school-info p {
+                font-size: 0.8rem;
+            }
+
+            .timetable-container {
+                padding: 15px;
+            }
+
+            .timetable-container select {
+                font-size: 0.9rem;
+                padding: 8px;
+            }
+
+            .download-btn,
+            .back-btn {
+                font-size: 0.9rem;
+                padding: 8px;
+            }
+
+            .back-btn {
+                font-size: 1.2rem;
+                padding: 8px 12px;
+            }
+        }
+
+        /* For devices with a max width of 480px (mobile phones) */
+        @media (max-width: 480px) {
+            header .school-info h1 {
+                font-size: 1rem;
+            }
+
+            header .school-info p {
+                font-size: 0.7rem;
+            }
+
+            .timetable-container {
+                padding: 10px;
+            }
+
+            .timetable-container select {
+                font-size: 0.8rem;
+                padding: 6px;
+            }
+
+            .download-btn,
+            .back-btn {
+                font-size: 0.8rem;
+                padding: 6px;
+            }
+
+            .back-btn {
+                font-size: 1rem;
+                padding: 6px 10px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Header -->
+    <header>
+        <img src="images/logo.png" alt="School Logo" class="logo">
+        <div class="school-info">
+            <h1>IDEAL PUBLIC SCHOOL</h1>
+            <p>Pakri Chowk, Alinagar, Darbhanga, State- Bihar, Pin Code - 847103 | Est. 2012</p>
+            <p>UDISE No. - 10131502705 , Reg. No. - 215118720211129140415 </p>
+        </div>
+    </header>
+
+    <!-- Timetable Content -->
+    <div class="timetable-container">
+        <h2>SCHOOL TIMETABLE</h2>
+
+        <!-- Class Dropdown -->
+        <label for="class-select">Select Class:</label>
+        <select id="class-select" onchange="showTimetable()">
+            <option value="">-- Select --</option>
+            <option value="nursery">Nursery</option>
+            <option value="lkg">LKG</option>
+            <option value="ukg">UKG</option>
+            <option value="1">Class 1</option>
+            <option value="2">Class 2</option>
+            <option value="3">Class 3</option>
+            <option value="4">Class 4</option>
+            <option value="5">Class 5</option>
+            <option value="6">Class 6</option>
+            <option value="8">Class 8</option>
+        </select>
+
+        <!-- Timetable Display Area -->
+        <div id="timetable-display">
+            <p>Select a class to view the timetable.</p>
+        </div>
+
+        <!-- Download Button -->
+        <button class="download-btn" onclick="downloadTimetable()">Download Timetable</button>
+    </div>
+
+    <!-- JavaScript -->
+    <script src="scripts/timetable.js"></script>
+    <script>
+        document.querySelector('.menu-toggle').addEventListener('click', function () {
+            document.querySelector('nav').classList.toggle('expanded');
+        });
+    </script>
+</body>
+
+</html>

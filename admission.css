@@ -1,0 +1,208 @@
+/* General Reset */
+body,
+h1,
+h2,
+p,
+button,
+input,
+select,
+label {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Body Styling */
+body {
+    background: linear-gradient(to right, #f8f9fa, #e9ecef);
+    color: #333;
+    padding: 20px;
+}
+
+/* header .logo {
+    height: 50px;
+    border-radius: 50%;
+} */
+
+/* header .school-info h1 {
+    font-size: 1.5rem;
+    margin-bottom: 5px;
+} */
+
+/* header .school-info p {
+    font-size: 0.9rem;
+} */
+
+header .close-btn {
+    background: #dc3545;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background 0.3s ease;
+}
+
+header .close-btn:hover {
+    background: #c82333;
+}
+
+/* Form Container */
+.form-container {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    margin: 20px auto;
+}
+
+.form-container h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #007bff;
+}
+
+/* Form Styling */
+form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+form input,
+form select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    transition: border-color 0.3s ease;
+}
+
+form input:focus,
+form select:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+form button {
+    width: 100%;
+    padding: 10px;
+    background: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+form button:hover {
+    background: #0056b3;
+}
+
+/* Back Button */
+.back-btn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #6c757d;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 50%;
+    font-size: 1.5rem;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.back-btn:hover {
+    background: #5a6268;
+    transform: scale(1.1);
+}
+
+/* Media Queries for Mobile Responsiveness */
+
+/* For devices with a max width of 768px (tablets and smaller) */
+@media (max-width: 768px) {
+    body {
+        padding: 10px;
+    }
+
+    header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    header .logo {
+        height: 40px;
+        margin-bottom: 10px;
+    }
+
+    header .school-info h1 {
+        font-size: 1.2rem;
+    }
+
+    header .school-info p {
+        font-size: 0.8rem;
+    }
+
+    .form-container {
+        padding: 15px;
+    }
+
+    form input,
+    form select,
+    form button {
+        font-size: 0.9rem;
+        padding: 8px;
+    }
+
+    form button {
+        font-size: 1rem;
+    }
+
+    .back-btn {
+        font-size: 1.2rem;
+        padding: 8px 12px;
+    }
+}
+
+/* For devices with a max width of 480px (mobile phones) */
+@media (max-width: 480px) {
+    header .school-info h1 {
+        font-size: 1rem;
+    }
+
+    header .school-info p {
+        font-size: 0.7rem;
+    }
+
+    .form-container {
+        padding: 10px;
+    }
+
+    form label {
+        font-size: 0.9rem;
+    }
+
+    form input,
+    form select {
+        font-size: 0.8rem;
+        padding: 6px;
+    }
+
+    form button {
+        font-size: 0.9rem;
+        padding: 8px;
+    }
+
+    .back-btn {
+        font-size: 1rem;
+        padding: 6px 10px;
+    }
+}

@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IDEAL PUBLIC SCHOOL</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <meta name="theme-color" content="#2fba3b">
+    <link rel="manifest" href="site.webmanifest">
+    <link rel="apple-touch-icon" href="icon.png">
+    <link rel="shortcut icon" href="images/logo.png" type="image/x-icon">
+
+    <style>
+        /* ===== FEEDBACK PAGE SPECIFIC STYLES ===== */
+        .feedback-content {
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 30px;
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 12px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+        }
+
+        .feedback-content h2 {
+            text-align: center;
+            color: var(--primary);
+            font-size: 2.2rem;
+            margin-bottom: 30px;
+            position: relative;
+            padding-bottom: 15px;
+        }
+
+        .feedback-content h2::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            background: var(--accent);
+            border-radius: 2px;
+        }
+
+        .feedback-form {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 25px;
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .form-group label {
+            font-weight: 600;
+            color: var(--dark);
+            margin-bottom: 8px;
+            font-size: 1.1rem;
+        }
+
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            padding: 14px 16px;
+            border: 2px solid #e0e0e0;
+            border-radius: 8px;
+            font-size: 1rem;
+            transition: all 0.3s;
+        }
+
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            border-color: var(--primary);
+            outline: none;
+            box-shadow: 0 0 0 3px rgba(47, 186, 59, 0.2);
+        }
+
+        .form-group textarea {
+            min-height: 150px;
+            resize: vertical;
+        }
+
+        .submit-btn {
+            background: var(--primary);
+            color: white;
+            border: none;
+            padding: 16px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            margin-top: 10px;
+        }
+
+        .submit-btn:hover {
+            background: var(--primary-dark);
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .feedback-content {
+                margin: 30px 20px;
+                padding: 25px;
+            }
+
+            .feedback-content h2 {
+                font-size: 1.8rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .feedback-content {
+                margin: 20px 15px;
+                padding: 20px;
+            }
+
+            .form-group input,
+            .form-group select,
+            .form-group textarea {
+                padding: 12px 14px;
+            }
+
+            .submit-btn {
+                padding: 14px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Header -->
+    <header>
+        <!-- Mobile Menu Button (Left Side) -->
+        <button class="menu-toggle" aria-label="Toggle Menu">☰</button>
+
+        <!-- Logo centered above school info -->
+        <img src="images/logo.png" alt="School Logo" class="logo">
+
+        <!-- School Info (Center) -->
+        <div class="school-info">
+            <h1>IDEAL PUBLIC SCHOOL</h1>
+            <p>Pakri Chowk, Alinagar, Darbhanga, State- Bihar, Pin Code - 847103 | Est. 2012</p>
+            <p>UDISE No. - 10131502705 , Reg. No. - 215118720211129140415 </p>
+        </div>
+    </header>
+
+    <!-- Navigation Menu -->
+    <nav id="main-nav">
+        <a href="index.html">Home</a>
+        <a href="about.html">About Us</a>
+        <a href="contact.html">Contact Us</a>
+        <a href="feedback.html" class="active">Feedback</a>
+    </nav>
+
+    <!-- CSS Styles -->
+    <style>
+
+    </style>
+
+    <!-- Feedback Form -->
+    <main class="feedback-content">
+        <h2>Share Your Feedback</h2>
+        <form class="feedback-form" action="https://formspree.io/f/xanekeey" method="POST">
+            <div class="form-group">
+                <label for="name">Your Name</label>
+                <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email Address</label>
+                <input type="email" id="email" name="email" placeholder="Enter your email" required>
+            </div>
+
+            <div class="form-group">
+                <label for="role">You are a:</label>
+                <select id="role" name="role">
+                    <option value="" disabled selected>Select your role</option>
+                    <option value="parent">Parent/Guardian</option>
+                    <option value="student">Student</option>
+                    <option value="teacher">Teacher/Staff</option>
+                    <option value="alumni">Alumni</option>
+                    <option value="visitor">Visitor</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="feedback">Your Feedback</label>
+                <textarea id="feedback" name="feedback"
+                    placeholder="Please share your thoughts, suggestions, or concerns..." required></textarea>
+            </div>
+
+            <button type="submit" class="submit-btn">
+                <i class="fas fa-paper-plane"></i> Submit Feedback
+            </button>
+        </form>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <!-- School Info -->
+            <div class="footer-section">
+                <img src="images/logo.png" alt="School Logo" class="footer-logo">
+                <h3>IDEAL PUBLIC SCHOOL</h3>
+                <p>Est. 2012 | Recognized Private School under Bihar State Education Department</p>
+                <p>UDISE No. - 10131502705 , Reg. No. - 215118720211129140415</p>
+                <p>12+ Years of Excellence</p>
+            </div>
+
+            <!-- Quick Links -->
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+                    <li><a href="admission.html"><i class="fas fa-edit"></i> Admissions</a></li>
+                    <li><a href="calendar.html"><i class="fas fa-calendar-alt"></i> Academic Calendar</a></li>
+                </ul>
+            </div>
+
+            <!-- Contact Info -->
+            <div class="footer-section">
+                <h3>Contact</h3>
+                <p><i class="fas fa-map-marker-alt"></i> Ideal Public School, pin code - 847103, Ashapur-Alinagar Road.
+                </p>
+                <p>Darbhanga, State - Bihar</p>
+                <p><i class="fas fa-phone"></i> +91 9931211638, +91 8210626798, +91 9354861146</p>
+                <p><i class="fas fa-envelope"></i> Idealpublicschoolpakri@gmail.com</p>
+            </div>
+
+            <!-- Social Media -->
+            <div class="footer-section">
+                <h3>Follow Us</h3>
+                <div class="social-icons">
+                    <a href="https://www.facebook.com/share/1AcJ9ZaQHm/" target="_blank"><i
+                            class="fab fa-facebook-f"></i></a>
+                    <a href="https://www.instagram.com/ideal_public_school_9931?igsh=ODNuZ3hqeDZrZzFo"
+                        target="_blank"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2023 IDEAL PUBLIC SCHOOL. All Rights Reserved | Privacy Policy</p>
+        </div>
+        <a href="#" class="back-to-top" aria-label="Back to top">↑</a>
+    </footer>
+</body>
+
+<script src="scripts/script.js"></script>
+
+</html>
